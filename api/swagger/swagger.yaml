@@ -47,7 +47,7 @@ paths:
         - in: query
           name: timestamp
           type: string
-          required: true
+          required: false
       responses:
         200:
           description: OK

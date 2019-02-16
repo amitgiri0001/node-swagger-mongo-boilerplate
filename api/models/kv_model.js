@@ -23,7 +23,8 @@ class MongoConnector {
         const { client, collection } = await this.connector();
         const value = await collection.find(
             {
-                key, timestamp: { $lte: new Date(timestamp * 1000) }
+                key, 
+                timestamp: { $lte: timestamp ? new Date(timestamp * 1000) : new Date() }
             },
             {
                 sort: {
