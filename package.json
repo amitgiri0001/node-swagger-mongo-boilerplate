@@ -9,17 +9,14 @@
   "main": "app.js",
   "dependencies": {
     "body-parser": "^1.18.3",
-    "express": "^4.12.3",
+    "express": "^4.16.4",
     "mongodb": "^3.1.13",
     "nodemon": "^1.18.10",
-    "swagger-express-mw": "^0.1.0"
+    "swagger-express-mw": "^0.7.0"
   },
-  "devDependencies": {
-    "should": "^7.1.0",
-    "supertest": "^1.0.0"
-  },
+  "devDependencies": {},
   "scripts": {
     "start": "nodemon app.js",
-    "test": "swagger project test"
+    "test": ""
   }
 }
