@@ -1,0 +1,25 @@
+{
+  "name": "v_api",
+  "version": "0.0.1",
+  "private": true,
+  "description": "API Project",
+  "keywords": [],
+  "author": "Amit Giri",
+  "license": "",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.12.3",
+    "mongodb": "^3.1.13",
+    "nodemon": "^1.18.10",
+    "swagger-express-mw": "^0.1.0"
+  },
+  "devDependencies": {
+    "should": "^7.1.0",
+    "supertest": "^1.0.0"
+  },
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "swagger project test"
+  }
+}

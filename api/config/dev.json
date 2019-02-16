@@ -1,0 +1,6 @@
+{
+    "MONGO_URL": "mongodb://localhost:27017",
+    "DB_NAME": "kv_db",
+    "COLLECTION_NAME": "kv",
+    "PORT": 3002
+}

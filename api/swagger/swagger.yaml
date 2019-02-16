@@ -1,0 +1,60 @@
+swagger: "2.0"
+info:
+  version: "0.0.1"
+  title: Api 
+host: localhost:10010
+# basePath prefixes all resource paths 
+basePath: /v01
+# 
+schemes:
+  - http
+  - https
+consumes:
+  - application/json
+produces:
+  - application/json
+paths:
+  /object:
+    x-swagger-router-controller: kv_controller
+    post:
+      operationId: saveKeyValuePairs
+      summary: save key value pairs
+      description: save key value pairs
+      parameters:
+        - name: pair
+          in: body
+          required: true
+          schema: 
+            type: object
+            maxProperties: 1
+            minProperties: 1
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+  /object/{key}:
+     x-swagger-router-controller: kv_controller
+     get:
+      operationId: getValueByKey
+      summary: Get value by params
+      description: Get value by params
+      parameters:
+        - in: path
+          name: key
+          type: string
+          required: true
+        - in: query
+          name: timestamp
+          type: string
+          required: true
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+              
+  /swagger:
+    x-swagger-pipe: swagger_raw
+  
+  

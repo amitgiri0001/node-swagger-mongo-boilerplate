@@ -1,0 +1,1 @@
+# node-swagger-mongo-boilerplate
